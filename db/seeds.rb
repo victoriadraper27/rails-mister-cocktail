@@ -10,8 +10,10 @@ require 'json'
 
 puts 'Cleaning database...'
 Ingredient.destroy_all
+Cocktail.destroy_all
 
 puts 'Creating Ingredient...'
+puts 'Creating Cocktail...'
 
 response = open('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list')
   json = JSON.parse(response.read)
@@ -25,4 +27,14 @@ json['drinks'].each do |ingre|
   puts "Created #{ingredient.name}"
 end
 
+4.times do
+  attributes = {
+    name: Faker::Beer.name
+  }
+  cocktail = Cocktail.create!(attributes)
+
+  puts "Created #{cocktail.name}"
+end
+
 puts "Finished! Created #{Ingredient.count} ingredients"
+puts "Finished! Created #{Cocktail.count} cocktails"
