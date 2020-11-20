@@ -1,6 +1,7 @@
 <div class= "contaienr m-5 ">
 <div class="jumbotron">
   <h1 class="display-4"><%= @cocktail.name %></h1>
+  <%= cl_image_tag @article.photo.key, height: 300, width: 400, crop: :fill %>
   <p class="lead">
     <ul>
     <% @cocktail.doses.each do |dose| %>

@@ -6,6 +6,7 @@
       <div class="col-lg-6">
         <%= simple_form_for(@cocktail) do |f| %>
         <%= f.input :name %>
+        <%= f.input :photo, as: :file %>
         <%= f.submit "Create Cocktail", class: "btn btn-new" %> |
         <%= link_to "Back to List", cocktails_path, class: "btn btn-new" %>
         <% end %>
