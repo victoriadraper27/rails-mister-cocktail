@@ -1,22 +1,20 @@
 .cards-page {
   display: flex;
   justify-content: center;
-  margin: 0 auto;
-
-  .cards-container {
-    margin-top: 10px;
-  }
 }
 
 .card {
   position: relative;
   height: 170px;
   // padding: 20px;
+  background-position: center;
   background-size: cover;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
   border-radius: 6px;
   margin: 20px 5px;
-  width: 16rem
+  width: 16rem;
+  font-weight: 24px;
+  color: aliceblue;
 
   .more-info {
     position: absolute;

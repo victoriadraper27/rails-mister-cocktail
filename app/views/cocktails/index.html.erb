@@ -3,8 +3,9 @@
     <h1>Cocktails</h1>
     <div class="row">
     <% @cocktails.each do |cocktail| %>
-      <div class="col-xs-6 col-md-5 col-lg-4">
-          <div class="card" style="background-image: url(<% cl_image_path @cocktail.photo.key  %>);">
+      <% if cocktail.photo.attached? %>
+      <div class="card-holder">
+          <div class="card" style="background-image: url('<%= cl_image_path cocktail.photo.key  %>');">
             <div class="card-body">
               <h5 class="card-title"><%= cocktail.name %></h5>
             </div>
@@ -13,8 +14,38 @@
             </div>
           </div>
       </div>
+      <% end %>
     <% end %>
     </div>
-    <%= link_to "Add New", new_cocktail_path, class: "btn btn-primary" %>
+    <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    ✚ New Cocktail
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+  <form class="px-4 py-3">
+    <h1>Create a New Cocktail</h1>
+    <%= simple_form_for(@cocktail) do |f| %>
+    <div class="form-group">
+      <%= f.input :name %>
+    </div>
+    <div class="form-group">
+     <%= f.input :photo, as: :file %>
+    </div>
+    <div class="dropdown-divider"></div>
+      <%= f.submit "Create Cocktail", class: "btn btn-info" %> |
+      <button type="cancel" class="btn btn-primary">Cancel</button>
+    <% end %>
+  </form>
+</div>
+</div>
   </div>
 </div>
+
+
+<!-- <div class="col p-4 d-flex flex-column position-static">
+  <strong class="d-inline-block mb-2 text-primary">World</strong>
+          <h3 class="mb-0">Featured post</h3>
+          <div class="mb-1 text-muted">Nov 12</div>
+          <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="stretched-link">Continue reading</a>
+        </div> -->
