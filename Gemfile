@@ -5,6 +5,7 @@ ruby '2.6.6'
 
 gem 'autoprefixer-rails'
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'cloudinary', '~> 1.16.0'
 gem 'faker'
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'simple_form'
