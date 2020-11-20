@@ -10,9 +10,9 @@ class CocktailsController < ApplicationController
     @dose = Dose.new
   end
 
-  def new
-    @cocktail = Cocktail.new
-  end
+  # def new
+  #   @cocktail = Cocktail.new
+  # end
 
   def create
     @cocktail = Cocktail.new(cocktail_params)
@@ -20,7 +20,7 @@ class CocktailsController < ApplicationController
     if @cocktail.save
       redirect_to cocktail_path(@cocktail), notice: 'cocktail was successfully created.'
     else
-      render :new
+      render 'cocktails/index'
     end
   end
 

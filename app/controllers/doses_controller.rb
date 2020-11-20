@@ -2,9 +2,9 @@ class DosesController < ApplicationController
   before_action :set_cocktail, except: :destroy
   before_action :set_dose, only: [:destroy]
 
-  def new
-    @dose = Dose.new
-  end
+  # def new
+  #   @dose = Dose.new
+  # end
 
   def create
     @dose = Dose.new(dose_params)
@@ -13,14 +13,13 @@ class DosesController < ApplicationController
     if @dose.save
       redirect_to cocktail_path(@cocktail)
     else
-      render :new
+      render 'cocktails/show'
     end
   end
 
   def destroy
-    @cocktail = @dose.cocktail
     @dose.destroy
-    redirect_to cocktail_path(@cocktail)
+    redirect_to cocktail_path(@dose.cocktail)
   end
 
   private
