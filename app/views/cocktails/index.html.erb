@@ -4,7 +4,7 @@
     <div class="row">
     <% @cocktails.each do |cocktail| %>
       <div class="col-xs-6 col-md-5 col-lg-4">
-          <div class="card" style="width: 16rem">
+          <div class="card" style="background-image: url(<% cl_image_path @cocktial.photo.key  %>);">
             <div class="card-body">
               <h5 class="card-title"><%= cocktail.name %></h5>
             </div>
