@@ -2,13 +2,14 @@
   transparent
 <% end %>
 <div class="home-banner">
-  <p>
+  <div class="home-banner-contents">
+    <div class="miss-cocktail-logo"> <%= cl_image_tag("qgsy1vblbzm9t9pgdghe.png") %></div>
     <h1 id="banner-typed-text">miss cocktail</h1>
     <%= link_to 'View Cocktails', cocktails_path, class: "btn-banner" %>
-  </p>
+  </div>
 </div>
 
-<div class="featured-card">
+<!-- <div class="featured-card">
 <div class="col p-4 d-flex flex-column position-static">
   <strong class="d-inline-block mb-2 text-primary">World</strong>
       <h3 class="mb-0">Featured post</h3>
@@ -16,4 +17,4 @@
       <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
       <a href="#" class="stretched-link">Continue reading</a>
 </div>
-</div>
+</div> -->

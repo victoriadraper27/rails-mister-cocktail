@@ -4,14 +4,19 @@
   height: 100vh;
   color: #eee;
   text-align: center;
-  padding-top: 40vh;
+  padding-top: 20vh;
 
-  justify-content: space-around;
+  justify-content: left;
 
-  img {
-    width: 500px;
+
+  .home-banner-contents {
+
+  }
+
+
+  .miss-cocktail-logo {
+    width: 300px;
     height: auto;
-    margin: 50px;
     opacity: 1;
   }
 
