@@ -1,34 +1,56 @@
 .home-banner {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),url('https://source.unsplash.com/a4z8GRkVSUM/1600x900');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),url('https://source.unsplash.com/ZOUlCOIlx80/1600x900');
   background-size: cover;
   height: 100vh;
-  color: #eee;
+  color: #ffff;
   text-align: center;
-  padding-top: 20vh;
-
-  justify-content: left;
+  padding-top: 35vh;
+  display: flex;
+  align-items: start;
 
 
   .home-banner-contents {
-
+    margin-left: 190px;
+    display: flex;
   }
-
 
   .miss-cocktail-logo {
-    width: 300px;
-    height: auto;
-    opacity: 1;
+    position: relative;
   }
+
+  .banner-text-and-btn {
+    position: absolute;
+    display:flex-column;
+    align-items: end;
+    // left: 80px;
+    // top: 80px;
+    bottom: 250px;
+    right: 320px;
+  }
+
+  #banner-typed-text {
+    font-family: $banner-font;
+    font-size: 100px;
+    text-align: end;
+  }
+
+
+  // .miss-cocktail-logo {
+  //   width: 200px;
+  //   height: auto;
+  //   opacity: 1;
+  // }
 
   .btn-banner {
     padding: 15px 30px;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
     border-radius: 3px;
     color: rgba(255, 255, 255, 0.8);
+    margin-left: 150px;
 
     &:hover {
-      background: rgba(0, 0, 0, 0.7);
+      background: rgba(0, 0, 0, 0.9);
       text-decoration: none;
       color: rgba(255, 255, 255, 1);
     }
@@ -37,4 +59,5 @@
 
  // xBFTjrMIC0c
  // ZOUlCOIlx80
+ // a4z8GRkVSUM
  // linear-gradient(#f1d75ac2, #f1d75a87),

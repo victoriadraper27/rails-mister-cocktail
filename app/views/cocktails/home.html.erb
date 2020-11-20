@@ -3,9 +3,11 @@
 <% end %>
 <div class="home-banner">
   <div class="home-banner-contents">
-    <div class="miss-cocktail-logo"> <%= cl_image_tag("qgsy1vblbzm9t9pgdghe.png") %></div>
-    <h1 id="banner-typed-text">miss cocktail</h1>
+    <%= cl_image_tag("misscocktail1.png", :width=>420, :crop=>"scale", class: "miss-cocktail-logo") %>
+    <div class="banner-text-and-btn">
+    <h1 id="banner-typed-text">iss cocktail</h1>
     <%= link_to 'View Cocktails', cocktails_path, class: "btn-banner" %>
+    </div>
   </div>
 </div>
 
@@ -18,3 +20,5 @@
       <a href="#" class="stretched-link">Continue reading</a>
 </div>
 </div> -->
+
+<!-- , :width=>420, :crop=>"scale" -->
