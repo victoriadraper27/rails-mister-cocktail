@@ -1,10 +1,28 @@
-<h1><%= @cocktail.name %></h1>
-<ul>
-  <% @cocktail.doses.each do |dose| %>
-  <li><%= dose.ingredient.name %></li>
-  <li class="list-inline-item"><%= dose.description %></li>
-  <%= link_to 'Remove', dose_path(dose), method: :delete, data: {confirm: 'Are you sure?'},  class: "text-danger" %>
-  <% end %>
-</ul>
-<%= link_to "Back to List", cocktails_path, class: "btn btn-info" %>
-<%= link_to "Add New", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
+<div class= "contaienr m-5 ">
+<div class="jumbotron">
+  <h1 class="display-4"><%= @cocktail.name %></h1>
+  <p class="lead">
+    <ul>
+    <% @cocktail.doses.each do |dose| %>
+    <li><%= dose.ingredient.name %> ● ● ● <%= dose.description %> </li>
+    <%= link_to 'Remove', dose_path(dose), method: :delete, data: {confirm: 'Are you sure?'},  class: "text-danger" %>
+    <% end %>
+    </ul>
+  </p>
+  <hr class="my-4">
+  <p> The time is now DRINK:30, so make yourself a drink </p>
+  <%= link_to "Back to List", cocktails_path, class: "btn btn-info" %>
+  <%= link_to "Add New", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
+</div>
+</div>
+
+
+
+
+<!-- <div class="col p-4 d-flex flex-column position-static">
+  <strong class="d-inline-block mb-2 text-primary">World</strong>
+          <h3 class="mb-0">Featured post</h3>
+          <div class="mb-1 text-muted">Nov 12</div>
+          <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="stretched-link">Continue reading</a>
+        </div> -->
